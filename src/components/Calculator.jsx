@@ -4,6 +4,7 @@ const Calculator = () => {
 
   const [userInp, setUserInp] = useState('');
 
+  // handle keyboard inputs from user
   const detectKey = (e) => {
     if (e.key === 'Enter') {
       let result = eval(userInp);
