@@ -15,14 +15,16 @@ const Calculator = () => {
   // to handle the onscreen inputs from user 
   const handleClick = (e) => {
 
-    if(e.target.value == 'backspace'){
+    if (e.target.value == 'backspace') {
       //when user click on backspace button
-        let newStr = userInp.substring(0, userInp.length-1)
-        setUserInp(newStr);
-    }else if(e.target.value == 'clear'){
+      let res = userInp.toString();
+      let newStr = res.substring(0, res.length - 1);
+      setUserInp(newStr);
+      
+    } else if (e.target.value == 'clear') {
       // if user clicked on clear button input should be blank
       setUserInp('');
-    }else if (e.target.value == '=') { 
+    } else if (e.target.value == '=') {
       // if user clicked on ' = ' button then calculate the result
       let result = eval(userInp);
       setUserInp(result);
